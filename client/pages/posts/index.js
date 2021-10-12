@@ -33,13 +33,12 @@ function Posts() {
                     ))}
                 </>
             ) : (
-               <>
+                <>
                     <div>
                         <CreateTask />
-                        Tasks
                     </div>
-                'There is no data'
-                    </>
+                    There is no data
+                </>
             )}
         </div>
     );

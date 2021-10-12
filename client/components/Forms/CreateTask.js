@@ -47,7 +47,7 @@ const CreateTask = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
-            <button onClick={createTask}>Create</button>
+            <button onClick={createTask}>Create task</button>
         </div>
     );
 };
