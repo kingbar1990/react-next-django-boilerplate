@@ -25,20 +25,4 @@
 
   - `docker-compose run server python manage.py createsuperuser`
 
-- ### Formatting python code
-  - `docker-compose run server black server/`
 
-
-# Install dependencies
-
-- ### Install Pipenv in your system - https://pypi.org/project/pipenv/
-
-- `cd server/`
-
-- `pipenv shell`
-
-- `pipenv install <dependency>`
-
-- ### Formatting python code
-
-- `docker-compose run server black server/`
