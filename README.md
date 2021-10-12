@@ -1,30 +1,44 @@
-Development server
-Set environment variables
-cp .env.example .env
 
-Build docker
-docker-compose build
+  # Development server
 
-Install node modules
-docker-compose run client yarn
+- ### Set environment variables
 
-Run python migrations
-docker-compose run server python manage.py migrate
+  - `cp .env.example .env`
 
-Run docker
-docker-compose up
+- ### Build docker
 
-Create superuser
-docker-compose run server python manage.py createsuperuser
+  - `docker-compose build`
 
-Install dependencies
-Install Pipenv in your system - https://pypi.org/project/pipenv/
+- ### Install node modules
 
-cd server/
+  - `docker-compose run client yarn`
 
-pipenv shell
+- ### Run python migrations
 
-pipenv install <dependency>
+  - `docker-compose run server python manage.py migrate`
 
-Formatting python code
-docker-compose run server black server/
+- ### Run docker
+
+  - `docker-compose up`
+
+- ### Create superuser
+
+  - `docker-compose run server python manage.py createsuperuser`
+
+- ### Formatting python code
+  - `docker-compose run server black server/`
+
+
+# Install dependencies
+
+- ### Install Pipenv in your system - https://pypi.org/project/pipenv/
+
+- `cd server/`
+
+- `pipenv shell`
+
+- `pipenv install <dependency>`
+
+- ### Formatting python code
+
+- `docker-compose run server black server/`
