@@ -20,17 +20,20 @@ const SignInForm = () => {
     const router = useRouter();
 
     const [form, setForm] = useState(null);
+    const [errors, setErrors] = useState(null);
 
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
             const response = await signIn(form);
+            setErrors(null);
             if (response.status === 200) {
                 const data = await response.json();
                 localStorage.setItem('token', data.key);
                 router.push('/posts');
             } else {
-                alert('Ooops something wrong! Please try again');
+                const data = await response.json();
+                setErrors(data.non_field_errors.toString());
             }
         } catch (error) {
             return null;
@@ -48,7 +51,7 @@ const SignInForm = () => {
         <div className="app">
             <form onSubmit={onSubmit}>
                 <input
-                    placeholder="email"
+                    placeholder="username"
                     onChange={handleChange('username')}
                 />
                 <br />
@@ -61,6 +64,7 @@ const SignInForm = () => {
                 <button>Submit</button>
                 <br />
                 <Link href="/sign-up">Don't have an account?</Link>
+                {errors && <p className="error-validation">{errors}</p>}
             </form>
         </div>
     );

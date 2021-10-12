@@ -56,3 +56,9 @@ a:hover {
     justify-content: left;
     align-items: baseline;
 }
+
+.error-validation {
+    color: #dc3545;
+    font-size: 14px;
+    margin: 0;
+}

@@ -20,6 +20,7 @@ const SignUp = () => {
     const router = useRouter();
 
     const [form, setForm] = useState(null);
+    const [errors, setErrors] = useState(null);
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -28,7 +29,8 @@ const SignUp = () => {
             if (response.status === 201) {
                 router.push('/sign-in');
             } else {
-                alert('Ooops something wrong! Please try again');
+                const data = await response.json();
+                setErrors(data);
             }
         } catch (error) {
             return null;
@@ -51,18 +53,27 @@ const SignUp = () => {
                 placeholder="email"
                 onChange={handleChange('email')}
             />
+            {errors?.email && (
+                <p className="error-validation">{errors.email}</p>
+            )}
             <br />
             <input
                 type="password"
                 placeholder="password1"
                 onChange={handleChange('password1')}
             />
+            {errors?.password1 && (
+                <p className="error-validation">{errors.password1}</p>
+            )}
             <br />
             <input
                 type="password"
                 placeholder="password2"
                 onChange={handleChange('password2')}
             />
+            {errors?.password2 && (
+                <p className="error-validation">{errors.password2}</p>
+            )}
             <br />
             <button>Submit</button>
             <br />
