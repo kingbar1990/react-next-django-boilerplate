@@ -1,1 +1,0 @@
-[{"model": "core.task", "pk": 4, "fields": {"name": "Task1", "assigned_to": 1}}, {"model": "core.task", "pk": 5, "fields": {"name": "Task2", "assigned_to": 1}}, {"model": "core.task", "pk": 6, "fields": {"name": "Task3", "assigned_to": 1}}]
