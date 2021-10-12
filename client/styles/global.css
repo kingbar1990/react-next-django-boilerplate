@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+        'Arial', sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #435674;
+}
+
+form {
+    min-width: 500px;
+    margin: auto;
+}
+
+input {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 8px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    background: rgb(98, 98, 251);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+}
+
+a:hover {
+    color: rgb(193, 193, 193);
+}
+
+.posts {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: baseline;
+}
